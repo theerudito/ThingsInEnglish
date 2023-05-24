@@ -21,6 +21,7 @@ namespace ThingsInEnglish.ViewModes
 
         public VM_PageHome(INavigation navigation)
         {
+
             GenerateThingAletory();
             GenerateFramesThingAletory();
 
@@ -40,6 +41,7 @@ namespace ThingsInEnglish.ViewModes
             {
                 Theme();
             }
+
         }
 
         #endregion Constructor
