@@ -114,9 +114,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\light.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Things In English\ThingsInEnglish.csproj">
       <Project>{7C1370B7-E068-4B9E-96A5-AA8CFDC3C56A}</Project>
       <Name>ThingsInEnglish</Name>
@@ -148,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\light.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
