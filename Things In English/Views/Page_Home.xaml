@@ -29,8 +29,11 @@
                         Grid.Column="1"
                         Margin="0,10,0,0"
                         BackgroundColor="{Binding ColorFramePrincipal}"
+                        BorderColor="Silver"
                         CornerRadius="10"
+                        HasShadow="True"
                         HeightRequest="40"
+                        RotationX="10"
                         WidthRequest="200">
                         <Grid>
                             <!--<Label
@@ -52,6 +55,7 @@
                                 FontSize="20"
                                 HorizontalOptions="Center"
                                 Text="Points:"
+                                TextColor="white"
                                 VerticalOptions="Center" />
                             <Label
                                 Grid.Column="1"
@@ -60,6 +64,7 @@
                                 FontSize="20"
                                 HorizontalOptions="Center"
                                 Text="{Binding LabelPoints}"
+                                TextColor="White"
                                 VerticalOptions="Center" />
                         </Grid>
                     </Frame>
@@ -81,11 +86,22 @@
                 Grid.Row="1"
                 Grid.Column="0"
                 Margin="20">
-                <Frame BackgroundColor="{Binding ColorFramePrincipal}" CornerRadius="50">
-                    <Image
-                        HeightRequest="200"
-                        Source="{Binding ImageRandom}"
-                        WidthRequest="200" />
+                <Frame
+                    BackgroundColor="{Binding ColorFramePrincipal}"
+                    CornerRadius="60"
+                    HasShadow="True"
+                    RotationX="10">
+                    <Frame
+                        BackgroundColor="#333333"
+                        BorderColor="White"
+                        CornerRadius="50"
+                        HasShadow="False">
+                        <Image
+                            Aspect="AspectFit"
+                            HeightRequest="200"
+                            Source="{Binding ImageRandom}"
+                            WidthRequest="200" />
+                    </Frame>
                 </Frame>
             </StackLayout>
 
@@ -106,7 +122,8 @@
                             FontAttributes="Bold"
                             FontFamily="AB"
                             HorizontalOptions="Center"
-                            Text="{Binding TextFrame1}" />
+                            Text="{Binding TextFrame1}"
+                            TextColor="Black" />
                     </Frame>
                     <Frame
                         Grid.Row="0"
@@ -120,7 +137,8 @@
                             FontAttributes="Bold"
                             FontFamily="AB"
                             HorizontalOptions="Center"
-                            Text="{Binding TextFrame2}" />
+                            Text="{Binding TextFrame2}"
+                            TextColor="Black" />
                     </Frame>
                 </Grid>
             </StackLayout>
@@ -142,7 +160,8 @@
                             FontAttributes="Bold"
                             FontFamily="AB"
                             HorizontalOptions="Center"
-                            Text="{Binding TextFrame3}" />
+                            Text="{Binding TextFrame3}"
+                            TextColor="Black" />
                     </Frame>
                     <Frame
                         Grid.Row="0"
@@ -156,7 +175,8 @@
                             FontAttributes="Bold"
                             FontFamily="AB"
                             HorizontalOptions="Center"
-                            Text="{Binding TextFrame4}" />
+                            Text="{Binding TextFrame4}"
+                            TextColor="Black" />
                     </Frame>
                 </Grid>
             </StackLayout>
@@ -178,7 +198,8 @@
                             FontAttributes="Bold"
                             FontFamily="AB"
                             HorizontalOptions="Center"
-                            Text="{Binding TextFrame5}" />
+                            Text="{Binding TextFrame5}"
+                            TextColor="Black" />
                     </Frame>
                     <Frame
                         Grid.Row="0"
@@ -192,7 +213,8 @@
                             FontAttributes="Bold"
                             FontFamily="AB"
                             HorizontalOptions="Center"
-                            Text="{Binding TextFrame6}" />
+                            Text="{Binding TextFrame6}"
+                            TextColor="Black" />
                     </Frame>
                 </Grid>
             </StackLayout>

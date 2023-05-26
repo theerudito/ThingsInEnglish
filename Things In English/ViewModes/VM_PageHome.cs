@@ -21,14 +21,10 @@ namespace ThingsInEnglish.ViewModes
 
         public VM_PageHome(INavigation navigation)
         {
-
-            GenerateThingAletory();
-            GenerateFramesThingAletory();
-
             Navigation = navigation;
 
             ThemeApp = LocalStorange.GetLocalStorange("theme");
-            ColorFramePrincipal = Color.Silver;
+            ColorFramePrincipal = Xamarin.Forms.Color.FromHex("333333");
 
             LabelPoints = 10;
             LabelTime = 99;
@@ -42,6 +38,8 @@ namespace ThingsInEnglish.ViewModes
                 Theme();
             }
 
+            GenerateThingAletory();
+            GenerateFramesThingAletory();
         }
 
         #endregion Constructor
@@ -500,7 +498,7 @@ namespace ThingsInEnglish.ViewModes
         public async void ColorDefault()
         {
             await Task.Delay(500);
-            ColorFramePrincipal = Color.Silver;
+            ColorFramePrincipal = Xamarin.Forms.Color.FromHex("333333");
         }
 
         public void AnswerCorrect()
