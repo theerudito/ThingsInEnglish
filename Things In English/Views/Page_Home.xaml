@@ -28,7 +28,7 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Margin="0,10,0,0"
-                        BackgroundColor="{Binding ColorFramePrincipal}"
+                        BackgroundColor="#333"
                         BorderColor="Silver"
                         CornerRadius="10"
                         HasShadow="True"
