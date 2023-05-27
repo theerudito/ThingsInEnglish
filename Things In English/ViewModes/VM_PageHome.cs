@@ -369,7 +369,7 @@ namespace ThingsInEnglish.ViewModes
             else
             {
                 ColorFrame1 = FrameInCorrect();
-                AnswerIncCorrect();
+                AnswerInCorrect();
                 Correct = false;
                 Points();
             }
@@ -395,7 +395,7 @@ namespace ThingsInEnglish.ViewModes
                 Correct = false;
                 Points();
                 ColorFrame2 = FrameInCorrect();
-                AnswerIncCorrect();
+                AnswerInCorrect();
             }
         }
 
@@ -419,7 +419,7 @@ namespace ThingsInEnglish.ViewModes
                 Correct = false;
                 Points();
                 ColorFrame3 = FrameInCorrect();
-                AnswerIncCorrect();
+                AnswerInCorrect();
             }
         }
 
@@ -442,7 +442,7 @@ namespace ThingsInEnglish.ViewModes
             {
                 Correct = false;
                 ColorFrame4 = FrameInCorrect();
-                AnswerIncCorrect();
+                AnswerInCorrect();
                 Points();
             }
         }
@@ -466,7 +466,7 @@ namespace ThingsInEnglish.ViewModes
             {
                 Correct = false;
                 ColorFrame5 = FrameInCorrect();
-                AnswerIncCorrect();
+                AnswerInCorrect();
                 Points();
             }
         }
@@ -490,7 +490,7 @@ namespace ThingsInEnglish.ViewModes
             {
                 Correct = false;
                 ColorFrame6 = FrameInCorrect();
-                AnswerIncCorrect();
+                AnswerInCorrect();
                 Points();
             }
         }
@@ -504,11 +504,13 @@ namespace ThingsInEnglish.ViewModes
         public void AnswerCorrect()
         {
             ColorFramePrincipal = FrameCorrect();
+            SoundsApp.SoundCorrect();
         }
 
-        public void AnswerIncCorrect()
+        public void AnswerInCorrect()
         {
             ColorFramePrincipal = FrameInCorrect();
+            SoundsApp.SoundInCorrect();
         }
 
         public Color FrameCorrect()
