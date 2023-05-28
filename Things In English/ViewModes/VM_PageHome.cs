@@ -21,9 +21,9 @@ namespace ThingsInEnglish.ViewModes
 
         public VM_PageHome(INavigation navigation)
         {
+            ThemeApp = LocalStorange.GetLocalStorange("theme");
             Navigation = navigation;
 
-            ThemeApp = LocalStorange.GetLocalStorange("theme");
             ColorFramePrincipal = Xamarin.Forms.Color.FromHex("333333");
 
             LabelPoints = 10;

@@ -10,7 +10,7 @@ namespace ThingsInEnglish
     {
         public App()
         {
-            LocalStorange.SetLocalStorange("theme", "Dark");
+            InitializeComponent();
 
             var _dbCcontext = new ApplicationContext_DB();
 
@@ -22,8 +22,6 @@ namespace ThingsInEnglish
             {
                 InformationData.DataDefault();
             }
-            InitializeComponent();
-
             MainPage = new NavigationPage(new Page_Home());
         }
 

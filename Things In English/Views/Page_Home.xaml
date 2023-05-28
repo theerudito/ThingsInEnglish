@@ -9,7 +9,6 @@
             BackgroundColor="{Binding Thema}"
             ColumnDefinitions="*"
             RowDefinitions="90,*,80,80,80,60">
-
             <StackLayout Grid.Row="0" Grid.Column="0">
                 <Grid ColumnDefinitions="100,*,100" RowDefinitions="*">
                     <StackLayout
