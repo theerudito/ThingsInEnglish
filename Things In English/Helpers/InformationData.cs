@@ -140,6 +140,12 @@ namespace ThingsInEnglish.Helpers
                new Things { IdThing = 126, Name = "TEACHER", ImageBase64 = DataBase64.stringOneHundredTwentySix},
                new Things { IdThing = 127, Name = "SHEET", ImageBase64 = DataBase64.stringOneHundredTwentySeven},
                new Things { IdThing = 128, Name = "WIFI", ImageBase64 = DataBase64.stringOneHundredTwentyEight},
+               new Things { IdThing = 129, Name = "BALLOONS", ImageBase64 = DataBase64.stringOneHundredTwentyNine},
+               new Things { IdThing = 130, Name = "RADIO", ImageBase64 = DataBase64.stringOneHundredThirty},
+               new Things { IdThing = 131, Name = "ICECREAM", ImageBase64 = DataBase64.stringOneHundredThirtyOne},
+               new Things { IdThing = 132, Name = "LIGHT LAMP", ImageBase64 = DataBase64.stringOneHundredThirtyTwo},
+               new Things { IdThing = 133, Name = "CORVATE", ImageBase64 = DataBase64.stringOneHundredThirtyThree},
+               new Things { IdThing = 134, Name = "BASKETBALL", ImageBase64 = DataBase64.stringOneHundredThirtyFour},
             };
 
             _dbCcontext.AddRange(newThing);
