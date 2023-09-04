@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.2" package="com.byErudito.ThingsInEnglish" android:installLocation="preferExternal">
-	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="31" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.2.1" package="com.byErudito.ThingsInEnglish" android:installLocation="preferExternal">
+	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="33" />
 	<application android:label="Things In English" android:theme="@style/MainTheme">
 		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-7633493507240683~3399043473" />
 	</application>

@@ -10,7 +10,7 @@ namespace ThingsInEnglish
     {
         public App()
         {
-            InitializeComponent();
+            Ads.ShowRewardedVideo();
 
             var _dbCcontext = new ApplicationContext_DB();
 
@@ -22,6 +22,10 @@ namespace ThingsInEnglish
             {
                 InformationData.DataDefault();
             }
+
+            InitializeComponent();
+
+
             MainPage = new NavigationPage(new Page_Home());
         }
 
