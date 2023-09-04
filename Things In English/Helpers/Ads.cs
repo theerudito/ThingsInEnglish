@@ -9,8 +9,6 @@ namespace ThingsInEnglish.Helpers
             var idIntersticial = "ca-app-pub-7633493507240683/7190362096";
 
             CrossMTAdmob.Current.LoadInterstitial(idIntersticial);
-
-            CrossMTAdmob.Current.ShowInterstitial();
         }
 
         public static bool IsIntertiscalLoaded()
@@ -23,8 +21,6 @@ namespace ThingsInEnglish.Helpers
             var idVideo = "ca-app-pub-7633493507240683/3984262527";
 
             CrossMTAdmob.Current.LoadRewardedVideo(idVideo);
-
-            CrossMTAdmob.Current.ShowRewardedVideo();
         }
 
         public static bool IsVideoLoaded()

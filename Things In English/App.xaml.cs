@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MarcTron.Plugin;
+using Microsoft.EntityFrameworkCore;
 using ThingsInEnglish.ApplicationContextDB;
 using ThingsInEnglish.Helpers;
 using ThingsInEnglish.Views;
@@ -24,6 +25,11 @@ namespace ThingsInEnglish
             }
 
             InitializeComponent();
+
+            CrossMTAdmob.Current.OnRewardedVideoAdLoaded += (s, args) =>
+            {
+                CrossMTAdmob.Current.ShowRewardedVideo();
+            };
 
 
             MainPage = new NavigationPage(new Page_Home());
