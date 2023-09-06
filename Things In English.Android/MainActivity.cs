@@ -3,7 +3,6 @@ using Android.Content.PM;
 using Android.Gms.Ads;
 using Android.OS;
 using Android.Runtime;
-using MarcTron.Plugin;
 
 namespace ThingsInEnglish.Droid
 {
@@ -13,16 +12,17 @@ namespace ThingsInEnglish.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
 
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+            TabLayoutResource = MarcTron.Plugin.Resource.Layout.Tabbar;
+            ToolbarResource = MarcTron.Plugin.Resource.Layout.Toolbar;
 
 
             base.OnCreate(savedInstanceState);
 
             MobileAds.Initialize(ApplicationContext);
 
+            Plugin.FirebasePushNotification.FirebasePushNotificationManager.ProcessIntent(this, Intent);
+
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            Xamarin.Forms.Forms.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
@@ -33,7 +33,5 @@ namespace ThingsInEnglish.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-
-
     }
 }
