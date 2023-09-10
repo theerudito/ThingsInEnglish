@@ -1,5 +1,4 @@
-﻿using MarcTron.Plugin;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,22 +20,15 @@ namespace ThingsInEnglish.ViewModes
 
         public VM_PageHome(INavigation navigation)
         {
-            ThemeApp = LocalStorange.GetLocalStorange("theme");
+
             Navigation = navigation;
 
-            ColorFramePrincipal = Xamarin.Forms.Color.FromHex("333333");
+            ColorFramePrincipal = Color.FromHex("333333");
 
             LabelPoints = 10;
             LabelTime = 99;
 
-            if (ThemeApp == "Dark")
-            {
-                Theme();
-            }
-            else
-            {
-                Theme();
-            }
+            Theme();
 
             GenerateThingAletory();
             GenerateFramesThingAletory();
@@ -538,47 +530,14 @@ namespace ThingsInEnglish.ViewModes
 
         public void TimeApp()
         {
-            //Device.StartTimer(TimeSpan.FromSeconds(1), () =>
-            //{
-            //    if (TimeAppMax > 0)
-            //    {
-            //        TimeAppMax--;
-            //        LabelTime = TimeAppMax;
-            //    }
-            //    else
-            //    {
-            //        TimeAppMax = 60;
-            //        GenerateAnswers();
-            //        GenerateNumber();
-            //        Points();
-            //        AnswerIncCorrect();
-            //        ColorDefault();
-            //        return false;
-            //    }
-            //    return true;
-            //});
+
         }
 
         public async Task GoPageInfo()
         {
-            //if (ValidationInternet.IsConnected())
-            //{
-            //    ShowInterstical();
-            //    if (CrossMTAdmob.Current.IsInterstitialLoaded())
-            //    {
-            //        CrossMTAdmob.Current.ShowInterstitial();
-            //        await Navigation.PushAsync(new Page_Info());
-            //    }
-            //}
             await Navigation.PushAsync(new Page_Info());
         }
 
-        public void ShowInterstical()
-        {
-            var idIntersticial = "ca-app-pub-7633493507240683/7190362096";
-
-            CrossMTAdmob.Current.LoadInterstitial(idIntersticial);
-        }
 
         public void Theme()
         {
@@ -586,14 +545,14 @@ namespace ThingsInEnglish.ViewModes
 
             if (ThemeApp == "Dark")
             {
-                Thema = Xamarin.Forms.Color.FromHex("#000000");
-                ImageTheme = ImageSource.FromFile("light.png");
+                Thema = Color.FromHex("#303345");
+                ImageTheme = ImageSource.FromFile("dark.png");
                 LocalStorange.SetLocalStorange("theme", "Light");
             }
             else
             {
-                Thema = Xamarin.Forms.Color.FromHex("303345");
-                ImageTheme = ImageSource.FromFile("dark.png");
+                Thema = Color.FromHex("#000000");
+                ImageTheme = ImageSource.FromFile("light.png");
                 LocalStorange.SetLocalStorange("theme", "Dark");
             }
         }

@@ -12,7 +12,7 @@ namespace ThingsInEnglish
     {
         public App()
         {
-            Ads.ShowRewardedVideo();
+            Ads.ShowIntertiscal();
 
             var _dbCcontext = new ApplicationContext_DB();
 
@@ -27,9 +27,9 @@ namespace ThingsInEnglish
 
             InitializeComponent();
 
-            CrossMTAdmob.Current.OnRewardedVideoAdLoaded += (s, args) =>
+            CrossMTAdmob.Current.OnInterstitialLoaded += (s, args) =>
             {
-                CrossMTAdmob.Current.ShowRewardedVideo();
+                CrossMTAdmob.Current.ShowInterstitial();
             };
 
             CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>

@@ -16,6 +16,7 @@ namespace ThingsInEnglish.Helpers
             return CrossMTAdmob.Current.IsInterstitialLoaded();
         }
 
+
         public static void ShowRewardedVideo()
         {
             var idVideo = "ca-app-pub-7633493507240683/3984262527";

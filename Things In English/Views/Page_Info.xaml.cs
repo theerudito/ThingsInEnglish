@@ -12,6 +12,17 @@ namespace ThingsInEnglish.Views
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+
+            var theme = Application.Current.RequestedTheme;
+
+            if (theme == OSAppTheme.Dark)
+            {
+                theadsImage.Source = ImageSource.FromFile("threads_light.png");
+            }
+            else
+            {
+                theadsImage.Source = ImageSource.FromFile("threads_dark.png");
+            }
         }
 
         public async void OpenUrl(string url)
@@ -37,6 +48,11 @@ namespace ThingsInEnglish.Views
         private void linkedin_Clicked(object sender, System.EventArgs e)
         {
             OpenUrl("https://www.linkedin.com/in/theerudito/");
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            OpenUrl("https://www.facebook.com/milagros.munozcuzco.1");
         }
     }
 }
