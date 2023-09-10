@@ -14,6 +14,17 @@ namespace ThingsInEnglish
         {
             Ads.ShowIntertiscal();
 
+            var ThemeApp = LocalStorange.GetLocalStorange("theme");
+
+            if (ThemeApp == null)
+            {
+                LocalStorange.SetLocalStorange("theme", "Light");
+            }
+            else
+            {
+                LocalStorange.SetLocalStorange("theme", ThemeApp);
+            }
+
             var _dbCcontext = new ApplicationContext_DB();
 
             _dbCcontext.Database.Migrate();

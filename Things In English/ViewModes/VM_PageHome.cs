@@ -545,14 +545,14 @@ namespace ThingsInEnglish.ViewModes
 
             if (ThemeApp == "Dark")
             {
-                Thema = Color.FromHex("#303345");
-                ImageTheme = ImageSource.FromFile("dark.png");
+                Thema = Color.FromHex("#000000");
+                ImageTheme = ImageSource.FromFile("light.png");
                 LocalStorange.SetLocalStorange("theme", "Light");
             }
             else
             {
-                Thema = Color.FromHex("#000000");
-                ImageTheme = ImageSource.FromFile("light.png");
+                Thema = Color.FromHex("#303345");
+                ImageTheme = ImageSource.FromFile("dark.png ");
                 LocalStorange.SetLocalStorange("theme", "Dark");
             }
         }
